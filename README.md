@@ -18,3 +18,14 @@
 14. More downloading woohoo!!
 15. After everything is set up, go back to the main window and hit the green play button
 16. Android emulator should be all set!
+
+# Goal
+
+Display a text with the name of the color. The text will be colored with a random color. The goal is to pick the color in the text, not the color of the test. (ex: If the text is "blue" and is colored red, you should pick the blue button). The users will have 3 seconds to press a button, and they will have to get 8 correct in a row to win.
+
+# Components
+
+We will need just two components for this game to function.
+
+1. Text that displays the puzzle, the timer, and the result of the game
+2. Colored buttons that i) acts as a start button ii) acts as an answer button
