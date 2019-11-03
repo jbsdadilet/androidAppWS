@@ -29,3 +29,21 @@ We will need just two components for this game to function.
 
 1. Text that displays the puzzle, the timer, and the result of the game
 2. Colored buttons that i) acts as a start button ii) acts as an answer button
+
+# TextView
+
+'''xml
+<TextView
+    android:id="@+id/resultTextView"
+    android:visibility="invisible"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@android:color/background_dark"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.785" />
+'''
