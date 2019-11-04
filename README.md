@@ -105,7 +105,7 @@ Make a button in the center that displays "GO!". Once the button is pressed, it 
 
 # How?
 
-Try to reference the sample code! Or you can simply copy paste the code in the repo, but that doesn't work, as the button does nothing (or it will not function at all)! This is because even though you defined the button to execute ***start***, you have not defined what ***start*** does!
+Try to reference the sample code! Or you can simply copy paste the code in the repo, but that doesn't work, as the button does nothing (or it will not function at all)! This is because even though you defined the button to execute ```start```, you have not defined what ```start``` does!
 
 # Writing "Actual" Code
 
@@ -127,7 +127,7 @@ and make sure the MainActivity class extends AppCompatActivity.
 
 When the app is opened, it runs the ```onCreate``` method. In order for us to change the attributes of all the components that we have defined in our ```xml``` file, we need to have a reference to it. To do this, we need a variable! Define variables in the class, and have the ```onCreate``` method find the proper component. You can do this by having something like:
 
-```
+```java
 public class MainActivity extends AppCompatActivity {
 
     Button startButton;
@@ -141,3 +141,41 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
+# Start the Game!
+
+Now that you have access to the components, we need to define the function ```start```. It will set the start button to invisible and everything else to visible, generate a question, and start the timer.
+
+# Generating a Question
+
+Theres 4 colors, so lets define ```Random rand = new Random()``` in the clas and use ```rand.nextInt(4)``` to get a random color. We will call this method twice to get a random color and a random text, and then use the result to change the **TextView** that displays the puzzle.
+
+# Starting the Timer
+
+Because this workshop is short, simply copy the code below into your ```start``` method get the timer working, where ```time``` is the variables that references to the TextView that displays the time:
+```
+        timer = new CountDownTimer(4000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                time.setText(String.valueOf(millisUntilFinished/1000+"s"));
+
+            }
+
+            @Override
+            public void onFinish() {
+                endGame();
+            }
+        }.start();
+```
+
+# Avengers: End Game
+
+When the time runs out, the game ends. Simply turn everything invisible and display a **TextView** that says "YOU LOSE!".
+
+# Win Game?
+
+Similarly, if the user wins, turn everything invisible and display "YOU WIN!".
+
+# Choosing Buttons
+
+Now we can start the game and end the game, but the game is still unplayable! Define a method that is called when an answer button is pressed. Have it compare if the answer is correct. If it is, reset the timer, add 1 to the correct count. When the correct count reaches 8, end the game. Otherwise, end the game.
