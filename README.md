@@ -50,4 +50,10 @@ We will need just two components for this game to function.
 
 You will learn that getting the layout correct will be a pain. In the sample TextView code above, the ```app:___``` defines how the TextView will be positioned. I recommend you to copy the code from the source for those entries.
 
-The attributes that we are interested in are _id, textSize,_ and _textColor_.
+The attributes that we are interested in are _id, visibility, textSize,_ and _textColor_.
+
+_id_, as the name suggests, gives the view a id so we can reference to this specific TextView in our code.
+
+_visibility_ determines if the view is visible or not.
+
+_textSize_ and _textColor_ does what you think it does.
