@@ -48,7 +48,7 @@ We will need just two components for this game to function.
     app:layout_constraintVertical_bias="0.785" />
 ```
 
-You will learn that getting the layout correct will be a pain. In the sample TextView code above, the ```app:___``` defines how the TextView will be positioned. I recommend you to copy the code from the source for those entries.
+You will learn that getting the layout correct will be a pain. In the sample **TextView** code above, the ```app:___``` defines how the **TextView** will be positioned. I recommend you to copy the code from the source for those entries.
 
 The attributes that we are interested in are _id, visibility, textSize,_ and _textColor_.
 
@@ -77,7 +77,7 @@ _textSize_ and _textColor_ does what you think it does.
     app:layout_constraintVertical_bias="0.499" />
 ```
 
-In addition to the properties that TextViews have, Buttons also have the _onClick_ attribute. It will execute the named function once clicked.
+In addition to the properties that **TextViews** have, **Buttons** also have the _onClick_ attribute. It will execute the named function once clicked.
 
 # GridLayout
 
@@ -92,6 +92,8 @@ In addition to the properties that TextViews have, Buttons also have the _onClic
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
-<! components here>
+    ... (components here)
 </android.widget.GridLayout>
 ```
+
+Because we would like to display 4 buttons that act as answer choices, it will be easier for us to use **GridLayout** to ensure the proper placement instead of placing each buttons 1 at a time. Notice the _columnCount_ and _rowCount_ attribute. We can add _android:layout_column_ and _android:layout_row_ to the components inside the **GridLayout** to specify which row/column it goes to.
