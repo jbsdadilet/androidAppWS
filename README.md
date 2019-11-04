@@ -48,4 +48,6 @@ We will need just two components for this game to function.
     app:layout_constraintVertical_bias="0.785" />
 ```
 
-You will learn that getting the layout correct will be a pain. In the sample TextView code above, the ```app:___```
+You will learn that getting the layout correct will be a pain. In the sample TextView code above, the ```app:___``` defines how the TextView will be positioned. I recommend you to copy the code from the source for those entries.
+
+The attributes that we are interested in are _id, textSize,_ and _textColor_.
