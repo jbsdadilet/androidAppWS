@@ -47,3 +47,5 @@ We will need just two components for this game to function.
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.785" />
 ```
+
+You will learn that getting the layout correct will be a pain. In the sample TextView code above, the ```app:___```
