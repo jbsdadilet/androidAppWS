@@ -78,3 +78,20 @@ _textSize_ and _textColor_ does what you think it does.
 ```
 
 In addition to the properties that TextViews have, Buttons also have the _onClick_ attribute. It will execute the named function once clicked.
+
+# GridLayout
+
+```xml
+<android.widget.GridLayout
+    android:layout_width="395dp"
+    android:layout_height="262dp"
+    android:columnCount="2"
+    android:rowCount="2"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+<! components here>
+</android.widget.GridLayout>
+```
