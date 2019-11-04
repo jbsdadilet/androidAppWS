@@ -17,9 +17,7 @@
 15. After everything is set up, go back to the main window and hit the green play button
 16. Android emulator should be all set!
 
-12a. If "/dev/kvm device: permission denied", run sudo setfacl -m u:$USER:rwx /dev/kvm
-
-12b. Restart Android Studios
+If "/dev/kvm device: permission denied", run sudo setfacl -m u:$USER:rwx /dev/kvm
 
 # Goal
 
@@ -127,4 +125,19 @@ import java.util.Random;
 
 and make sure the MainActivity class extends AppCompatActivity.
 
-When the app is opened, it runs the ```java onCreate``` method.
+When the app is opened, it runs the ```onCreate``` method. In order for us to change the attributes of all the components that we have defined in our ```xml``` file, we need to have a reference to it. To do this, we need a variable! Define variables in the class, and have the ```onCreate``` method find the proper component. You can do this by having something like:
+
+```
+public class MainActivity extends AppCompatActivity {
+
+    Button startButton;
+    ...
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        startButton = findViewById(R.id.startButton);
+    }
+}
+```
