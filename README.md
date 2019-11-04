@@ -153,7 +153,7 @@ Theres 4 colors, so lets define ```Random rand = new Random()``` in the clas and
 # Starting the Timer
 
 Because this workshop is short, simply copy the code below into your ```start``` method get the timer working, where ```time``` is the variables that references to the TextView that displays the time:
-```
+```java
         timer = new CountDownTimer(4000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
