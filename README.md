@@ -70,6 +70,7 @@ _textSize_ and _textColor_ does what you think it does.
     android:text="GO!"
     android:textSize="80sp"
     android:onClick="start"
+    android:tag="4"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +78,7 @@ _textSize_ and _textColor_ does what you think it does.
     app:layout_constraintVertical_bias="0.499" />
 ```
 
-In addition to the properties that **TextViews** have, **Buttons** also have the _onClick_ attribute. It will execute the named function once clicked.
+In addition to the properties that **TextViews** have, **Buttons** also have the _onClick_ attribute. It will execute the named function once clicked. _tag_ is additional information that you can define. We will see how this is useful.
 
 # GridLayout
 
@@ -97,3 +98,27 @@ In addition to the properties that **TextViews** have, **Buttons** also have the
 ```
 
 Because we would like to display 4 buttons that act as answer choices, it will be easier for us to use **GridLayout** to ensure the proper placement instead of placing each buttons 1 at a time. Notice the _columnCount_ and _rowCount_ attribute. We can add _android:layout_column_ and _android:layout_row_ to the components inside the **GridLayout** to specify which row/column it goes to.
+
+# Make the Layout!
+
+Make a button in the center that displays "GO!". Once the button is pressed, it should display the 4 colored buttons, a timer, the puzzle, and the correct answer count.
+
+# How?
+
+Try to reference the sample code! Or you can simply copy paste the code in the repo, but that doesn't work, as the button does nothing (or it will not function at all)! This is because even though you defined the button to execute ***start***, you have not defined what ***start*** does!
+
+# Writing "Actual" Code
+
+Now that the front-end code is all set, we need to make the game work! Go to the ***MainActivity.java*** and import the following:
+
+```java
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.CountDownTimer;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.Random;
+```
