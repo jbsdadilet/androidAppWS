@@ -32,7 +32,7 @@ We will need just two components for this game to function.
 
 # TextView
 
-'''xml
+```xml
 <TextView
     android:id="@+id/resultTextView"
     android:visibility="invisible"
@@ -46,4 +46,4 @@ We will need just two components for this game to function.
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.785" />
-'''
+```
