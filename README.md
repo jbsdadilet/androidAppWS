@@ -122,3 +122,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 ```
+
+and make sure the MainActivity class extends AppCompatActivity.
+
+When the app is opened, it runs the ```java onCreate``` method.
