@@ -57,3 +57,24 @@ _id_, as the name suggests, gives the view a id so we can reference to this spec
 _visibility_ determines if the view is visible or not.
 
 _textSize_ and _textColor_ does what you think it does.
+
+# Button
+
+```xml
+<Button
+    android:id="@+id/startButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:padding="50dp"
+    android:text="GO!"
+    android:textSize="80sp"
+    android:onClick="start"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.499" />
+```
+
+In addition to the properties that TextViews have, Buttons also have the _onClick_ attribute. It will execute the named function once clicked.
