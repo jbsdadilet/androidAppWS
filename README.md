@@ -4,7 +4,7 @@
 2. Finish the set up (use the recommended settings)
 3. Start a new Android Studio project
 4. Select "Empty Activity" under "Phone and Tablet"
-5. Name your project ("myAndroidGame)
+5. Name your project ("myAndroidGame")
 6. Name your package (format typically goes com.author.project)
 7. Select "Java" for language
 8. Choose Android 5.0 (Lollipop) for Minimum API level
